@@ -44,10 +44,22 @@
 /* 0 */
 /***/ function(module, exports) {
 
-	import React from "react";
-	import Greeting from "./greeting";
+	import React from "react-dom";
 
-	React.render(React.createElement(Greeting, { name: "World" }), document.body);
+	var HelloMessage = React.createClass({
+	  displayName: "HelloMessage",
+
+	  render: function () {
+	    return React.createElement(
+	      "div",
+	      null,
+	      "Hello ",
+	      this.props.name
+	    );
+	  }
+	});
+
+	ReactDOM.render(React.createElement(HelloMessage, { name: "John" }), document.getElementById('container'));
 
 /***/ }
 /******/ ]);

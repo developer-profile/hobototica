@@ -14,7 +14,7 @@ module.exports = {
   loaders: [
     
     { 
-    test: /\.jsx?$/,         // Match both .js and .jsx files
+    test: /\.js?$/,         // Match both .js and .jsx files
     exclude: /node_modules/,
     loader: "react-hot", 
     loader: "babel", 
